@@ -1,0 +1,354 @@
+
+################################################################################
+#                                                                              #
+# Python FRagment Electronic Coupling (PyFREC) v2.7                            #
+# Program for calculation of electronic couplings                              #
+#                                                                              #
+# Dmitri Kosenkov,  2016-2022                                                  #
+# Monmouth University                                                          #
+#                                                                              #
+#########################################################################DVK####
+
+2022-03-08 12:57:47
+3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)]
+================================================================================
+CONFIGURATION
+Configuration File      : .\BODIPY_c_ac.ini
+--------------------------------------------------------------------------------
+METHODS
+JOB                     : SURVEY
+RATES                   : OVERLAP
+--------------------------------------------------------------------------------
+MOLECULAR_SYSTEM
+GEOMETRY_FILE           : ./../pdb/bodipy_trz_c_ac.pdb
+EL_SCR_MODEL            : 1
+N                       : 1.3441
+--------------------------------------------------------------------------------
+FRAGMENT1
+NAME                    : BDP
+ID                      : 1
+ATOMLIST                : 1, 2, 4, 13, 20
+ATOMTRANS               : 1, 2, 4, 13, 20
+EXSTATE_FILE            : ./BDP_c_ac.txt
+EXSTATE                 : 1
+--------------------------------------------------------------------------------
+FRAGMENT2
+NAME                    : TRZ
+ID                      : 2
+ATOMLIST                : 23, 24, 25, 26, 29
+ATOMTRANS               : 23, 24, 25, 26, 29
+EXSTATE_FILE            : ./TRZ_a_b_c_ac.txt
+EXSTATE                 : 1
+--------------------------------------------------------------------------------
+Number of Fragments     : 2
+================================================================================
+Reading PDB file....
+--------------------------------------------------------------------------------
+FREC SAYS: FRAGMENT1 NAME = BDP ID = 1 ATOMLIST = 1, 2, 4, 13, 20 NATOMS = 5
+B1       3.477        -1.514       0.278       
+C2       3.542        1.461        -0.201      
+N4       2.257        -0.58        0.125       
+F13      3.393        -2.564       -0.642      
+C20      -1.336       0.124        0.009       
+--------------------------------------------------------------------------------
+FREC SAYS: FRAGMENT2 NAME = TRZ ID = 2 ATOMLIST = 23, 24, 25, 26, 29 NATOMS = 5
+C23      -5.611       -0.073       -0.147      
+N24      -6.309       0.607        0.773       
+N25      -7.619       0.549        0.728       
+C26      -8.186       -0.184       -0.239      
+C29      -9.676       -0.248       -0.303      
+--------------------------------------------------------------------------------
+Reading excited states file...
+
+Fragment: BDP1 tabulated normalized EMISSION spectrum is available. Maximum: 18294.19  cm-1 ( 546.6 nm ) I= 1.0  Arb. Units; Integration limits: 506 - 830 nm
+Maximum of the emission is obtained from the tabulated spectrum.
+
+Fragment: TRZ2 tabulated ABSORPTION spectrum is available. Maximum: 17783.47  cm-1 ( 562.3 nm ) Eps= 615.0 M-1 cm-1; Integration limits: 485 - 605 nm
+Maximum of the absorption is obtained from the tabulated spectrum.
+--------------------------------------------------------------------------------
+FRAGMENT1 NAME = BDP ID = 1
+EXSTATE_FILE = ./BDP_c_ac.txt
+B1       1.6031       -1.4967      0.2077      
+C2       1.5558       1.5021       -0.0823     
+N3       0.3518       -0.6071      0.0436      
+F4       1.6129       -2.4934      -0.7734     
+C5       -3.2633      -0.0467      -0.2198     
+--------------------------------------------------------------------------------
+Coordinates of origin:
+(0.0          0.0          0.0         )
+None
+--------------------------------------------------------------------------------
+Excited states read from the input file:
+State, Abs. Max, nm, Transition Dipole Moment (x,y,z) ea0, abs. ea0, Debye  
+1     0.0          (-3.3813      -0.0886      0.0094      ) 3.3825       8.5974       546.6        
+--------------------------------------------------------------------------------
+FRAGMENT2 NAME = TRZ ID = 2
+EXSTATE_FILE = ./TRZ_a_b_c_ac.txt
+C1       -1.7468      -0.001       0.0124      
+N2       -1.1338      -1.1857      0.0006      
+N3       0.1805       -1.185       -0.0125     
+C4       0.8088       0.0017       -0.0107     
+C5       2.3012       0.0005       0.0085      
+--------------------------------------------------------------------------------
+Coordinates of origin:
+(0.0          0.0          0.0         )
+None
+--------------------------------------------------------------------------------
+Excited states read from the input file:
+State, Abs. Max, nm, Transition Dipole Moment (x,y,z) ea0, abs. ea0, Debye  
+1     562.3        (0.002        0.0          0.3492      ) 0.3492       0.8876       0.0          
+--------------------------------------------------------------------------------
+Transforming fragments...
+--------------------------------------------------------------------------------
+FRAGMENT1 NAME = BDP ID = 1
+--------------------------------------------------------------------------------
+Original coordinates used for matching (independent atom index):
+B1       1.6031       -1.4967      0.2077      
+C2       1.5558       1.5021       -0.0823     
+N3       0.3518       -0.6071      0.0436      
+F4       1.6129       -2.4934      -0.7734     
+C5       -3.2633      -0.0467      -0.2198     
+
+Mol. Sys. (target) coordinates used for matching:
+B1       3.477        -1.514       0.278       
+C2       3.542        1.461        -0.201      
+N4       2.257        -0.58        0.125       
+F13      3.393        -2.564       -0.642      
+C20      -1.336       0.124        0.009       
+--------------------------------------------------------------------------------
+User defined center within coordinate system of the fragment: [0. 0. 0.]
+Transformed origin : [1.93053342 0.03867724 0.05783077]
+Norm               : 1.93178663303267
+[-3.3813 -0.0886  0.0094]
+--------------------------------------------------------------------------------
+Mol. Sys. (target) coordinates all atoms:
+B1       3.477        -1.514       0.278       
+C2       3.542        1.461        -0.201      
+N3       2.257        -0.58        0.125       
+F4       3.393        -2.564       -0.642      
+C5       -1.336       0.124        0.009       
+--------------------------------------------------------------------------------
+Transformed coordinates (independent index) compare against target...
+B1       3.4788       -1.5133      0.2762      
+C2       3.5409       1.4616       -0.1988     
+N3       2.2586       -0.5798      0.1212      
+F4       3.3938       -2.567       -0.6396     
+C5       -1.339       0.1256       0.0099      
+--------------------------------------------------------------------------------
+TRANSFOMRATION
+Scaling     : 0.999374948279437 (not used info. only)
+Translation : [1.93053342 0.03867724 0.05783077]
+Norm        : 1.93178663303267
+Rotation    :
+[[ 0.99765751 -0.04496903 -0.05154872]
+ [ 0.04170152  0.99715454 -0.06279967]
+ [ 0.05422608  0.0605029   0.996694  ]]
+Axis-Angl   : (0.669651921034585 -0.5744592053555975 0.47070471214645826) 5.282397294997016 deg
+
+--------------------------------------------------------------------------------
+METRICS REPORT
+Transformation errors, Angstrom     SUM            RMS            N             
+All atoms:                        : 5.7986450317774034e-05 0.0034054794175790884 5             
+Only matched atoms:               : 5.7986450317774034e-05 0.0034054794175790884 5             
+--------------------------------------------------------------------------------
+FRAGMENT2 NAME = TRZ ID = 2
+--------------------------------------------------------------------------------
+Original coordinates used for matching (independent atom index):
+C1       -1.7468      -0.001       0.0124      
+N2       -1.1338      -1.1857      0.0006      
+N3       0.1805       -1.185       -0.0125     
+C4       0.8088       0.0017       -0.0107     
+C5       2.3012       0.0005       0.0085      
+
+Mol. Sys. (target) coordinates used for matching:
+C23      -5.611       -0.073       -0.147      
+N24      -6.309       0.607        0.773       
+N25      -7.619       0.549        0.728       
+C26      -8.186       -0.184       -0.239      
+C29      -9.676       -0.248       -0.303      
+--------------------------------------------------------------------------------
+User defined center within coordinate system of the fragment: [0. 0. 0.]
+Transformed origin : [-7.37194039 -0.15319194 -0.21078388]
+Norm               : 7.376544092965239
+[0.002  0.     0.3492]
+--------------------------------------------------------------------------------
+Mol. Sys. (target) coordinates all atoms:
+C1       -5.611       -0.073       -0.147      
+N2       -6.309       0.607        0.773       
+N3       -7.619       0.549        0.728       
+C4       -8.186       -0.184       -0.239      
+C5       -9.676       -0.248       -0.303      
+--------------------------------------------------------------------------------
+Transformed coordinates (independent index) compare against target...
+C1       -5.6281      -0.0715      -0.1494     
+N2       -6.306       0.6116       0.7742      
+N3       -7.6181      0.5472       0.7304      
+C4       -8.1792      -0.1957      -0.2371     
+C5       -9.6696      -0.2406      -0.306      
+--------------------------------------------------------------------------------
+TRANSFOMRATION
+Scaling     : 1.003448665772672 (not used info. only)
+Translation : [-7.37194039 -0.15319194 -0.21078388]
+Norm        : 7.376544092965239
+Rotation    :
+[[-0.99840777 -0.04078872 -0.03896427]
+ [ 0.05572113 -0.60562649 -0.79379576]
+ [-0.00878012  0.79470299 -0.60693498]]
+C:\Projects\Monmouth\MyPrograms\Python\Coupling\PyFREC_Release\Shared\v2\couplib\vrrotmat2vec.py:135: RuntimeWarning: invalid value encountered in arccos
+  phi = np.arccos((mtrc[ind3]-1)/2)
+Axis-Angl   : (nan nan nan) nan deg
+
+--------------------------------------------------------------------------------
+METRICS REPORT
+Transformation errors, Angstrom     SUM            RMS            N             
+All atoms:                        : 0.0006321473021779902 0.011244085575785967 5             
+Only matched atoms:               : 0.0006321473021779902 0.011244085575785967 5             
+--------------------------------------------------------------------------------
+All fragments PDB coordinates:
+B1       3.477        -1.514       0.278       
+C2       3.542        1.461        -0.201      
+N4       2.257        -0.58        0.125       
+F13      3.393        -2.564       -0.642      
+C20      -1.336       0.124        0.009       
+C23      -5.611       -0.073       -0.147      
+N24      -6.309       0.607        0.773       
+N25      -7.619       0.549        0.728       
+C26      -8.186       -0.184       -0.239      
+C29      -9.676       -0.248       -0.303      
+--------------------------------------------------------------------------------
+All fragments transformed coordinates (independent index):
+B1       3.4788       -1.5133      0.2762      
+C2       3.5409       1.4616       -0.1988     
+N3       2.2586       -0.5798      0.1212      
+F4       3.3938       -2.567       -0.6396     
+C5       -1.339       0.1256       0.0099      
+C1       -5.6281      -0.0715      -0.1494     
+N2       -6.306       0.6116       0.7742      
+N3       -7.6181      0.5472       0.7304      
+C4       -8.1792      -0.1957      -0.2371     
+C5       -9.6696      -0.2406      -0.306      
+--------------------------------------------------------------------------------
+Survey Forster couplings and rates...
+--------------------------------------------------------------------------------
+Donor:  BDP1  Acceptor: TRZ2
+R, Distance vector:
+[-9.30247381 -0.19186918 -0.26861466]
+Unnormalized orientation factor kappa: -0.05109432985709575
+--------------------------------------------------------------------------------
+Orientation Factor Decomposition for: BDP1 and TRZ2
+dot(nMuDnMuA) =  -0.004398024818354003
+dot(nMuD,nR)  =  0.015633928455475343
+dot(nMuA,nR)  =  0.9956189231160617
+3.0*dot(nMuD,nR)*dot(nMuA,nR) = 0.046696305038741746
+np.dot(nMuD,nMuA)-3.0*np.dot(nMuD,nR)*np.dot(nMuA,nR) = -0.05109432985709575
+--------------------------------------------------------------------------------
+R (Bohr): 17.590190999937573
+Electrostatic screening model: Uniform screening
+Refractive index N= 1.3441  will be used to calculate the uniform screening factor as 1/n^2
+Screening factor: 0.5535244866308088
+Empirical tabulated spectra for the donor and acceptor are provided numerical overlap will be calculated...
+Numerical integration relative tolerance: 0.001
+
+Integration limits:
+Tabulated emission spectrum:                     506 - 830 nm
+Tabulated absorption spectrum:                   485 - 605 nm
+Overlap:                                         506 - 605 nm
+
+EMS = int[F_D(Lambda)]d(Lambda) = 5.07E+01
+Actual integration error: 4.69E-02 ( 9.26E-02 %)
+ABSEMS = int[epsilon(Lambda)xF_D(Lambda)xLambda^4]d(Lambda) = 1.55E+15
+Actual integration error: 451187468313.0 ( 2.91E-02 %)
+Resulting overlap: ABSEMS/EMS = 3.06E+13 M-1 cm-1 nm^4
+
+Resonances are computed based on spectral overlaps
+
+--------------------------------------------------------------------------------
+Direct calculation of Forster rates (electronic couplings are not explicitly used)
+
+Spectral overlap: 3.06E+13 M-1 cm-1 nm^4
+User-specified refractive index: 1.3441
+Unnormalized orientation factor kappa: -0.05109432985709575
+User-specified quantum yield of the donor: 0.6
+User-specified fluorescence lifetime of the donor: 4.30E-09 s
+Forster radius: 1.04 nm
+Donor-acceptor distance: 9.31 Ang ( 0.93  nm)
+
+Information on oscillator zones:
+b = Lambda/(2 PI n) = 64.73 nm
+
+Dexter (contact zone)  0-0.01b (0- 0.65 nm)
+Near field (Forster valid) 0.01b-0.1b ( 0.65 - 6.47 nm)
+Intermediate zone 0.1b-10 ( 6.47 - 647.25 nm)
+Radiation zone (far field) >10b (> 647.25 nm)
+
+Efficiency of the energy transfer (valid for dimers only) E = 0.6651307964612782
+
+Fluorescence rate: 2.33E+08 s-1
+Forster (non-radiative) rate: 4.62E+08 s-1
+
+--------------------------------------------------------------------------------
+Donor:  TRZ2  Acceptor: BDP1
+R, Distance vector:
+[9.30247381 0.19186918 0.26861466]
+Unnormalized orientation factor kappa: -0.05109432985709575
+--------------------------------------------------------------------------------
+Orientation Factor Decomposition for: TRZ2 and BDP1
+dot(nMuDnMuA) =  -0.004398024818354003
+dot(nMuD,nR)  =  -0.9956189231160617
+dot(nMuA,nR)  =  -0.015633928455475343
+3.0*dot(nMuD,nR)*dot(nMuA,nR) = 0.046696305038741746
+np.dot(nMuD,nMuA)-3.0*np.dot(nMuD,nR)*np.dot(nMuA,nR) = -0.05109432985709575
+--------------------------------------------------------------------------------
+R (Bohr): 17.590190999937573
+Electrostatic screening model: Uniform screening
+Refractive index N= 1.3441  will be used to calculate the uniform screening factor as 1/n^2
+Screening factor: 0.5535244866308088
+Resonances are computed based on spectral overlaps
+
+--------------------------------------------------------------------------------
+Direct calculation of Forster rates (electronic couplings are not explicitly used)
+
+Spectral overlap: 0.00E+00 M-1 cm-1 nm^4
+The Forster rate will be set to zero...
+
+--------------------------------------------------------------------------------
+Transformed Excited States for Each Fragment:
+
+ PDB TAG      Ex. St.     Tran. Dipole Moment (x,y,z) a.u.            Abs. a.u.       Abs. Debye      Abs. En, nm          Ems. nm
+    BDP1            1 (-3.3766      0.0643       0.1892      )             3.38             8.60                0              547
+    TRZ2            1 (-0.0051      0.2774       -0.212      )             0.35             0.89              562                0
+
+--------------------------------------------------------------------------------
+Resonances satisfying condition  overlap(Ej,Ei) >= 1.0
+       Frg i  PDB TAG        Frg j  PDB TAG      Ex.St i      Ex.St j      Ei cm-1      Ej cm-1      Overlap
+
+           1     BDP1            2     TRZ2            1            1            0        17783    3.064e+13
+--------------------------------------------------------------------------------
+Total resonances:  1
+
+Electronic couplings list:
+
+Note that the orintation factor percentage is calculated as: Ori, % = 100 x Ori / 2 
+
+       Frg i  PDB TAG        Frg j  PDB TAG      Ex.St i      Ex.St j Abs. Ej-Ei,cm-1         R, A  AxB,(ea0)^2         Ori.        Ori.%   K',(ea0)^2       E,cm-1   Scr.E,cm-1
+           1     BDP1            2     TRZ2            1            1    17783.468        9.308        1.181     -0.05109       -2.555     -0.06035       -2.434       -1.347
+           2     TRZ2            1     BDP1            1            1   -17783.468        9.308        1.181     -0.05109       -2.555     -0.06035       -2.434       -1.347
+--------------------------------------------------------------------------------
+Total couplings:  2
+
+Electronic couplings list (non-zero only) that satisfy the resonance condition. Pairs of states i,j and j,i are distinguished.  overlap(Ej,Ei) >= 1.0
+
+       Frg i  PDB TAG        Frg j  PDB TAG      Ex.St i      Ex.St j Abs. Ej-Ei,cm-1         R, A  AxB,(ea0)^2         Ori.        Ori.%   K',(ea0)^2       E,cm-1   Scr.E,cm-1
+           1     BDP1            2     TRZ2            1            1    17783.468        9.308        1.181     -0.05109       -2.555     -0.06035       -2.434       -1.347
+--------------------------------------------------------------------------------
+Total couplings that satisfy the resonance condition:  1
+Pairs of states i,j and j,i are distinguished.
+
+Energy transfer rates:
+
+       Frg i  PDB TAG        Frg j  PDB TAG      Ex.St i      Ex.St j   Scr.E,cm-1 J, M-1 cm-1 nm^4      k, ps-1        t, ps
+           1     BDP1            2     TRZ2            1            1       -1.347    3.064e+13    0.0004619         2165
+           2     TRZ2            1     BDP1            1            1       -1.347            0            0          inf
+--------------------------------------------------------------------------------
+Total rates :  2
+Done.

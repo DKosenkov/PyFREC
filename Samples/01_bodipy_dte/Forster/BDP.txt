@@ -1,0 +1,83 @@
+#
+# Input data for PyFREC
+# Properties of the excited state of the molecular fragment BODIPY of the BODIPY-DTE dyads (open and closed forms)
+# 
+$GEOMETRY
+B   0.000990   -1.345633   0.001674
+C   -0.003370   1.656790   -0.000117
+C   1.211858   0.972155   0.127057
+N   1.232797   -0.420953   0.144682
+C   -2.505327   -0.828964   -0.264724
+C   -3.359598   0.293512   -0.335862
+C   -2.557999   1.429299   -0.237844
+C   -1.210628   0.965606   -0.127388
+N   -1.231853   -0.423505   -0.144819
+C   2.556958   1.433234   0.236664
+C   3.359450   0.298632   0.335745
+C   2.506739   -0.825067   0.264173
+F   -0.139477   -2.150461   1.138738
+F   0.142142   -2.154736   -1.131450
+C   2.882431   -2.268015   0.280389
+C   -2.878573   -2.272337   -0.281929
+H   -2.255457   -2.820266   -0.991130
+H   -2.715106   -2.717164   0.704041
+H   2.757965   -2.702114   -0.715756
+H   3.920517   -2.397217   0.587117
+H   2.233981   -2.824387   0.960622
+H   -3.927215   -2.400886   -0.550726
+C   3.055899   2.845703   0.236216
+H   2.643489   3.419183   -0.597415
+H   2.779238   3.372028   1.154529
+H   4.143971   2.863994   0.152000
+C   -3.059388   2.840580   -0.237795
+H   -2.653044   3.413877   0.599116
+H   -2.778837   3.369465   -1.153217
+H   -4.148563   2.857206   -0.159118
+C   -4.856779   0.236797   -0.437610
+H   -5.224861   1.125497   -0.959769
+H   -5.151517   -0.615182   -1.059777
+C   -5.538199   0.127566   0.931330
+H   -5.285606   0.988748   1.557982
+H   -6.625879   0.086131   0.828404
+H   -5.209518   -0.773801   1.457505
+C   4.857016   0.243434   0.436416
+H   5.225353   1.136905   0.948898
+H   5.151878   -0.603061   1.067526
+C   5.536757   0.118558   -0.932371
+H   5.207514   -0.789437   -1.447245
+H   5.284047   0.972996   -1.567849
+H   6.624688   0.077350   -0.829414
+$END
+
+# FORMAT OF EXCITED STATES (values in the list below):
+# 1.   Excited state index  
+# 2.   Absorption maximum, cm-1 (optional if tabulated absorption spectrum is provided)*
+# 3-5. Transition dipole moment s x,y, and z components in a.u.*
+# 6.   Emission maximum, cm-1 (optional if tabulated emission spectrum is provided)*
+# 7.   Molar absorption (extinction) coefficient at the absorption maximum in M-1 cm-1*
+# 8.  Quantum yield of the donor (unitless)*
+# 9.  Lifetime of the donor excited state in the abscense of the acceptor in seconds*
+#-------
+#*Put 0.0 if value is unknown or not relevant
+
+#
+#Empirical molar absorption, emission and lifetime data (see publication for details and references)
+
+$EXCITED_STATES
+1   0.0   -3.4021   0.0001   -0.2557 0.0 56000.0 0.6 4.3E-9
+$END
+
+# NUMBER OF EXCITED STATES =  5
+
+#Coordinates of the fragment center (origin of the fragment)
+$CENTER
+0.0 0.0 0.0
+$END	
+
+
+#Tabulated emission spectrum
+$EMS_SPEC 1 506 830
+./spectra/BODIPY_DTE_OPEN_EMS_2.txt
+$END
+
+
