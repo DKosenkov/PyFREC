@@ -1,0 +1,34 @@
+#
+# Input data for PyFREC
+# Properties of the excited state of the molecular fragment BODIPY  
+#
+# FORMAT OF EXCITED STATES (values in the list below):
+# 1.   Excited state index  
+# 2.   Absorption maximum (optional if tabulated absorption spectrum is provided)*
+# 3-5. Transition dipole moment s x,y, and z components in a.u.*
+# 6.   Emission maximum (optional if tabulated emission spectrum is provided)*
+# 7.   Molar absorption (extinction) coefficient at the absorption maximum in M-1 cm-1*
+# 8.  Quantum yield of the donor (unitless)*
+# 9.  Lifetime of the donor excited state in the abscense of the acceptor in seconds*
+#-------
+#*Put 0.0 if value is unknown or not relevant
+
+#Empirical molar absorption, emission, and lifetime data (see publication for details and references)
+$EXCITED_STATES
+1 0.0 0.0 0.0 0.0 0.0 56000.0 0.6 0.0
+$END
+#
+
+#Tabulated absorbance spectrum
+$ABS_SPEC 1 434 734
+./spectra/BODIPY_DTE_OPEN_ABS_2.txt
+$END
+
+#Tabulated emission spectrum
+$EMS_SPEC 1 506 830
+./spectra/BODIPY_DTE_OPEN_EMS_2.txt
+$END
+
+
+
+

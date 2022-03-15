@@ -1,0 +1,37 @@
+#
+# Input data for PyFREC
+# Properties of the excited state of the molecular fragment BODIPY of the BODIPY-TRZ probe (c)
+# 
+$GEOMETRY
+B   1.603143   -1.496738   0.207719
+C   1.555806   1.502105   -0.082322
+N   0.351844   -0.607055   0.043571
+F   1.612935   -2.493448   -0.773399
+C   -3.263322   -0.046658   -0.219850
+$END
+
+# FORMAT OF EXCITED STATES (values in the list below):
+# 1.   Excited state index  
+# 2.   Absorption maximum (optional if tabulated absorption spectrum is provided)*
+# 3-5. Transition dipole moment s x,y, and z components in a.u.*
+# 6.   Emission maximum (optional if tabulated emission spectrum is provided)*
+# 7.   Molar absorption (extinction) coefficient at the absorption maximum in M-1 cm-1*
+# 8.  Quantum yield of the donor (unitless)*
+# 9.  Lifetime of the donor excited state in the abscense of the acceptor in seconds*
+#-------
+#*Put 0.0 if value is unknown or not relevant
+
+#Empirical emission and lifetime data (see publication for details and references)
+$EXCITED_STATES
+1   0.0 -3.3813   -0.0886   0.0094 0.0 56000.0 0.6 4.3e-9
+$END
+
+#Coordinates of the fragment center (origin of the fragment)
+$CENTER
+0.0 0.0 0.0
+$END
+
+#Tabulated emission spectrum  (see publication for details and references)
+$EMS_SPEC 1 506 830
+./spectra/BODIPY_DTE_OPEN_EMS.txt
+$END
