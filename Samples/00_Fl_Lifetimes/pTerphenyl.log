@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File ".\..\..\PyFREC\src\v0207\pyfrec.py", line 13, in <module>
-    from configuration import Configuration
-  File "C:\Projects\Monmouth\MyPrograms\Python\Coupling\PyFREC_Release\PyFREC\src\v0207\configuration.py", line 44, in <module>
-    CFG_SEC_LST_ALW =  (CFG_SEC_MET, CFG_SEC_MSY, CFG_SEC_QDY, )  #allowed sections
-NameError: name 'CFG_SEC_QDY' is not defined
