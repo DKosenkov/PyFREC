@@ -91,7 +91,7 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 434 830
-./spectra/DTE_OPEN_ABS_BL2.txt
+./spectra/dte_open_abs_bl2.txt
 $END
 
 #Coordinates of the fragment center (origin of the fragment)

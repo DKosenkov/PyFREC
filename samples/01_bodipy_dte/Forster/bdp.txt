@@ -77,7 +77,7 @@ $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 506 830
-./spectra/BODIPY_DTE_OPEN_EMS_2.txt
+./spectra/bodipy_dte_open_ems_2.txt
 $END
 
 
