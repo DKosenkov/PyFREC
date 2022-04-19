@@ -1,0 +1,126 @@
+
+################################################################################
+#                                                                              #
+# Python FRagment Electronic Coupling (PyFREC) v2.7                            #
+# Program for calculation of electronic couplings                              #
+#                                                                              #
+# Dmitri Kosenkov,  2016-2022                                                  #
+# Monmouth University                                                          #
+#                                                                              #
+#########################################################################DVK####
+
+2022-04-15 17:02:37
+3.8.13 (default, Mar 28 2022, 06:59:08) [MSC v.1916 64 bit (AMD64)]
+================================================================================
+CONFIGURATION
+Configuration File      : .\r6g.ini
+--------------------------------------------------------------------------------
+METHODS
+JOB                     : LIFETIME
+--------------------------------------------------------------------------------
+MOLECULAR_SYSTEM
+N                       : 1.3611
+SB                      : 1
+KAPPA_SQ                : 0.6666
+--------------------------------------------------------------------------------
+FRAGMENT1
+NAME                    : R6G
+ID                      : 1
+EXSTATE_FILE            : ./r6g.txt
+EXSTATE                 : 1
+--------------------------------------------------------------------------------
+Number of Fragments     : 1
+================================================================================
+Calculation of lifetimes...
+Reading excited states file...
+
+Fragment: R6G1 tabulated ABSORPTION spectrum is available. Maximum: 18876.83  cm-1 ( 529.8 nm ) Eps= 116000.0 M-1 cm-1; Integration limits: 400 - 700 nm
+Maximum of the absorption is obtained from the tabulated spectrum.
+Fragment: R6G1 tabulated normalized EMISSION spectrum is available. Maximum: 18115.94  cm-1 ( 552.0 nm ) I= 1.0  Arb. Units; Integration limits: 500 - 750 nm
+Maximum of the emission is obtained from the tabulated spectrum.
+--------------------------------------------------------------------------------
+FRAGMENT1 NAME = R6G ID = 1
+EXSTATE_FILE = ./r6g.txt
+Excited states read from the input file:
+State	Abs.Max. nm 	Ems.Max nm  	Eps M-1cm-1 	Q           
+1    	529.8       	552.0       	116000.0    	0.95        
+--------------------------------------------------------------------------------
+
+Strickler-Berg (SB) calculation of the donor fluorescence  lifetime...
+Calculation method: Integration of the emission spectrum...
+Fragment: R6G1
+--------------------------------------------------------------------------------
+State   : 1
+Quantum yield:  0.95
+
+Absorption (tabulated spectrum):
+Numerical integration tolerances relative: 0.001
+Integration limits: 14285.714285714286   25000.0 cm-1
+Integral int[a(nu)/nu]d[nu] =  9166.21654925221
+Epsilon x Integral int[a(nu)/nu]d[nu] =  9166.21654925221
+Actual integration error:  7.0688532443982695 ( 0.07711854947366428 %)
+--------------------------------------------------------------------------------
+
+Emission (tabulated spectrum):
+Numerical integration tolerances relative: 0.001
+Integration limits cm-1 13333.333333333334   20000.0
+Integral int[e(nu)d[nu] =  2036.9028879537518
+Actual integration error: 0.061700849646513234 ( 0.0030291502855345825 %)
+Integral int[e(nu)/nu^3]d[nu] =  3.798493245818501e-10
+Actual integration error: 3.300763125282811e-11 ( 8.689664326549464 %)
+Integral (int[e(nu)/nu^3]d[nu])/(int[e(nu)]dnu) =  1.8648376750226033e-13
+--------------------------------------------------------------------------------
+Strickler-Berg Calculation summary:
+
+Simplified emission calculation based on the tabulated absorption lineshape:
+tau_1 = 3.44E-09 s (1/tau_1 = 2.91E+08 1/s)
+Accounts for the quantum  yield:  tau_1(obs) = 3.27E-09 s - this value will be used in further calculations...
+--------------------------------------------------------------------------------
+Integration based on tabulated spectra:
+tau_2 = 3.81E-09 s (1/tau_2 = 2.62E+08 1/s)
+Accounts for the quantum  yield:  tau_2(obs) = 3.62E-09 s
+--------------------------------------------------------------------------------
+
+Homotransfer Properties
+Fragment: R6G1
+State   : 1
+Numerical integration relative tolerance: 0.001
+
+Integration limits:
+Tabulated emission spectrum:                     500 - 750 nm
+Tabulated absorption spectrum:                   400 - 700 nm
+Overlap:                                         500 - 700 nm
+
+EMS = int[F_D(Lambda)]d(Lambda) = 6.63E+01
+Actual integration error: 5.40E-02 ( 8.15E-02 %)
+ABSEMS = int[epsilon(Lambda)xF_D(Lambda)xLambda^4]d(Lambda) = 1.30E+17
+Actual integration error: 104924767683104.0 ( 8.10E-02 %)
+Resulting overlap: ABSEMS/EMS = 1.96E+15 M-1 cm-1 nm^4
+
+
+--------------------------------------------------------------------------------
+Direct calculation of Forster rates (electronic couplings are not explicitly used)
+
+Spectral overlap: 1.96E+15 M-1 cm-1 nm^4
+User-specified refractive index: 1.3611
+User-specified (NOT calculated) orientation factor kappa squared: 0.6666 ( kappa = 0.8164557550780078 )
+User-specified quantum yield of the donor: 0.95
+Estimated Strickler-Berg fluorescence lifetime of the donor: 3.27E-09 s
+Forster radius: 5.63 nm
+Donor-acceptor distance is assumed to be the Forster radius: 5.63 nm
+
+Information on oscillator zones:
+b = Lambda/(2 PI n) = 64.55 nm
+
+Dexter (contact zone)  0-0.01b (0- 0.65 nm)
+Near field (Forster valid) 0.01b-0.1b ( 0.65 - 6.45 nm)
+Intermediate zone 0.1b-10 ( 6.45 - 645.46 nm)
+Radiation zone (far field) >10b (> 645.46 nm)
+
+Efficiency of the energy transfer (valid for dimers only) E = 0.5
+
+Fluorescence rate: 3.06E+08 s-1
+Forster (non-radiative) rate: 3.06E+08 s-1
+
+--------------------------------------------------------------------------------
+Done.
