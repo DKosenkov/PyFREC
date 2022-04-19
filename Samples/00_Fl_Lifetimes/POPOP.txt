@@ -3,7 +3,6 @@
 # Properties of the excited state of the molecular fragment POPOP 
 #
 # FORMAT OF EXCITED STATES (values in the list below):
-# FORMAT OF EXCITED STATES (values in the list below):
 # 1.   Excited state index  
 # 2.   Absorption maximum (optional if tabulated absorption spectrum is provided)*
 # 3-5. Transition dipole moment s x,y, and z components in a.u.*
@@ -21,12 +20,12 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 250 450
-./spectra/B10_POPOP.abs.txt
+./spectra/b10_popop.abs.txt
 $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 350 500
-./spectra/B10_POPOP.ems.txt
+./spectra/b10_popop.ems.txt
 $END
 
 

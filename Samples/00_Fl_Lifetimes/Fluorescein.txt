@@ -20,12 +20,12 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 400 600
-./spectra/N01_2321-07-5_Fluorescein.abs.txt
+./spectra/n01_2321-07-5_fluorescein.abs.txt
 $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 500 700
-./spectra/N01_2321-07-5_Fluorescein.ems.txt
+./spectra/n01_2321-07-5_fluorescein.ems.txt
 $END
 
 

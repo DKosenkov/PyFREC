@@ -21,12 +21,12 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 434 734
-./spectra/BODIPY_DTE_OPEN_ABS_2.txt
+./spectra/bodipy_dte_open_abs_2.txt
 $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 506 830
-./spectra/BODIPY_DTE_OPEN_EMS_2.txt
+./spectra/bodipy_dte_open_ems_2.txt
 $END
 
 

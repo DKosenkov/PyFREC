@@ -32,5 +32,5 @@ $END
 
 #Tabulated absorbance spectrum (see publication for details and references)
 $ABS_SPEC 1 485 605
-./spectra/METHYL_TRZ_abs.txt
+./spectra/methyl_trz_abs.txt
 $END

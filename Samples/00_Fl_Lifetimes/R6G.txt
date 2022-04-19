@@ -20,12 +20,12 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 400 700
-./spectra/N13_989-38-8_Rhodamine_6G.abs.txt
+./spectra/n13_989-38-8_rhodamine_6g.abs.txt
 $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 500 750
-./spectra/N13_989-38-8_Rhodamine_6G.ems.txt
+./spectra/n13_989-38-8_rhodamine_6g.ems.txt
 $END
 
 

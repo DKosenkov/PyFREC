@@ -20,12 +20,12 @@ $END
 
 #Tabulated absorbance spectrum
 $ABS_SPEC 1 235 333
-./spectra/B02_92-94-4_p-Terphenyl.abs.txt
+./spectra/b02_92-94-4_p-terphenyl.abs.txt
 $END
 
 #Tabulated emission spectrum
 $EMS_SPEC 1 300 500
-./spectra/B02_92-94-4_p-Terphenyl.ems.txt
+./spectra/b02_92-94-4_p-terphenyl.ems.txt
 $END
 
 
