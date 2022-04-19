@@ -45,5 +45,5 @@ ELEMENTS_BY_ATOMIC_N = ['X','H','He',
 'Cs','Ba','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Hf','Ta','W','Re','Os','Ir','Pt','Au','Hg','Tl','Pb','Bi','Po','At','Rn',
 'Fr','Ra','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr','Rf','Db','Sg','Bh','Hs','Mt','Ds','Rg','Cn','Uut','Fl','Uup','Lv','Uus','Uuo']
 #-------------------------------------------------------------------------------
-RE_FLOAT = '[-]?\d+(?:.\d+)?|\.\d+' #Regular expression to match float numbers
-RE_DOUBLE = '[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eED][+\-]?\d+)?'
+RE_FLOAT = r'[-]?\d+(?:.\d+)?|\.\d+' #Regular expression to match float numbers
+RE_DOUBLE = r'[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eED][+\-]?\d+)?'
