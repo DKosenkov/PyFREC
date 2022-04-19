@@ -50,7 +50,7 @@ class ExStatesReader(MyFileService):
 		GeoAtomSectionStart = -1
 		for LineCounter in range(0, len(lines)):
 			line = lines[LineCounter]
-			if ( re.match('^\s*'+CFG_EXS_SEC_GEO+'\s*$', line) ):
+			if ( re.match(r'^\s*'+CFG_EXS_SEC_GEO+r'\s*$', line) ):
 				GeoAtomSectionStart = LineCounter
 				break
 
@@ -63,7 +63,7 @@ class ExStatesReader(MyFileService):
 		#Read GEOMETRY (CFG_EXS_SEC_GEO) section
 		for line in lines[(GeoAtomSectionStart+1):]:
 			#O   0.718236   0.718236   -4.951050
-			matched = re.match('^\s*(\w+)\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s*$', line)
+			matched = re.match(r'^\s*(\w+)\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s*$', line)
 			if (matched):
 				ElSymExs = str(matched.group(1)).strip().upper()
 				x = float(matched.group(2))
@@ -83,7 +83,7 @@ class ExStatesReader(MyFileService):
 		ExSectionStart = -1
 		for LineCounter in range(0, len(lines)):
 			line = lines[LineCounter]
-			if ( re.match('^\s*'+CFG_EXS_SEC_ETD+'\s*$', line) ):
+			if ( re.match(r'^\s*'+CFG_EXS_SEC_ETD+r'\s*$', line) ):
 				ExSectionStart = LineCounter
 				break
 			
@@ -157,7 +157,7 @@ class ExStatesReader(MyFileService):
 		ExSectionStart = -1 
 		for LineCounter in range(0, len(lines)):
 			line = lines[LineCounter]
-			if ( re.match('^\s*'+CFG_EXS_SEC_CNT+'\s*$', line) ):
+			if ( re.match(r'^\s*'+CFG_EXS_SEC_CNT+r'\s*$', line) ):
 				ExSectionStart = LineCounter
 				break
 
@@ -167,7 +167,7 @@ class ExStatesReader(MyFileService):
 
 		#Read EXCITED_STATES (CFG_EXS_SEC_ETD) section
 		for line in lines[(ExSectionStart+1):]:
-			matched = re.match('^\s*('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s*$', line)
+			matched = re.match(r'^\s*('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s*$', line)
 			if (matched):
 				#Coordinates of the center:
 				x = float(matched.group(1))
@@ -326,7 +326,7 @@ class ExStatesReader(MyFileService):
 		self.cfg.Fragments[FragID][CFG_EXS_NQDVID] = 0
 		for LineCounter in range(0, len(lines)):
 			line = lines[LineCounter]
-			if ( re.match('^\s*'+CFG_EXS_SEC_QDV+'\s*$', line) ):
+			if ( re.match(r'^\s*'+CFG_EXS_SEC_QDV+r'\s*$', line) ):
 				ExSectionStart = LineCounter
 				break
 
