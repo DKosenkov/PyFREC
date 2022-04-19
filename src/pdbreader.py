@@ -79,8 +79,8 @@ class PDBReader(MyFileService):
 		'''
 		FILE = open(FileName,'r')
 		for line in FILE.readlines():
-			SecFrgRE = '^\s*'+CFG_SEC_FRG.strip().upper()+'\d+\s*$'
-			if ( re.match('^ATOM\s*', line) or re.match('^HETATM\s*', line) ):
+			SecFrgRE = r'^\s*'+CFG_SEC_FRG.strip().upper()+r'\d+\s*$'
+			if ( re.match(r'^ATOM\s*', line) or re.match(r'^HETATM\s*', line) ):
 				#The following numerical values are taken from PDB format specification
 				#http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html
 				AtomPDBID = int(line[6:11])  # Atom serial number
@@ -102,8 +102,8 @@ class PDBReader(MyFileService):
 		"""Read CIF input file"""
 		FILE = open(FileName,'r')
 		for line in FILE.readlines():
-			SecFrgRE = '^\s*'+CFG_SEC_FRG.strip().upper()+'\d+\s*$'
-			RegExline = '^(ATOM|HETATM)\s+(\d+)\s+([a-zA-Z0-9_]+)\s+([a-zA-Z0-9_]+)\s+.\s+([a-zA-Z0-9_]+)\s+([a-zA-Z0-9_]+)\s+(\d+)'
+			SecFrgRE = r'^\s*'+CFG_SEC_FRG.strip().upper()+r'\d+\s*$'
+			RegExline = r'^(ATOM|HETATM)\s+(\d+)\s+([a-zA-Z0-9_]+)\s+([a-zA-Z0-9_]+)\s+.\s+([a-zA-Z0-9_]+)\s+([a-zA-Z0-9_]+)\s+(\d+)'
 			matched = re.match(RegExline, line)
 			if(matched):
 				AtomPDBID = int(matched.group(2)) # Atom ID
@@ -112,7 +112,7 @@ class PDBReader(MyFileService):
 				ResName = str(matched.group(5)) # Residue name
 				ChainID = str(matched.group(6)) # Chain name?
 				#_ChainCode = int(matched.group(7)) # Chain code?
-				RegExline2 = '\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+.\s+(\d+)'
+				RegExline2 = r'\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+.\s+(\d+)'
 				matched2 = re.search(RegExline2, line)
 				if(matched2):
 					x = float(matched2.group(1)) # x, A

@@ -109,9 +109,9 @@ class ExStatesReader(MyFileService):
 		for line in lines[(ExSectionStart+1):]:
 			#No quantum dynamics, default behavior
 			if (self.cfg.Methods[CFG_MET_QD] == CFG_MET_QD_NONE ):
-				matched = re.match('^\s*(\d+)\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_DOUBLE+')\s+('+RE_FLOAT+')\s+('+RE_DOUBLE+')\s*$', line)
+				matched = re.match(r'^\s*(\d+)\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_DOUBLE+r')\s+('+RE_FLOAT+r')\s+('+RE_DOUBLE+r')\s*$', line)
 			else:
-				matched = re.match('^\s*(\d+)\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_DOUBLE+')\s+('+RE_FLOAT+')\s+('+RE_DOUBLE+')\s+('+RE_FLOAT+')\s*$', line)
+				matched = re.match(r'^\s*(\d+)\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_DOUBLE+r')\s+('+RE_FLOAT+r')\s+('+RE_DOUBLE+r')\s+('+RE_FLOAT+r')\s*$', line)
 			#Additional parameters for quantum dynamics
 			if (matched):
 				ExStID = int(matched.group(1)) #Excited state ID
@@ -198,7 +198,7 @@ class ExStatesReader(MyFileService):
 		ExSectionStart = -1 
 		for LineCounter in range(0, len(lines)):
 			line = lines[LineCounter]
-			matched = re.match('^\s*'+Section_Name+'\s+(\d+)\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s*$', line)
+			matched = re.match(r'^\s*'+Section_Name+r'\s+(\d+)\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s*$', line)
 			if ( matched ):
 				State_ID = int(matched.group(1))
 				Int_Lim_Low_nm = int(matched.group(2))
@@ -210,7 +210,7 @@ class ExStatesReader(MyFileService):
 			return
 
 		FirstLine = lines[(ExSectionStart+1)]
-		matched = re.match('^\s*('+RE_DOUBLE+')\s+('+RE_DOUBLE+')\s*$', FirstLine)
+		matched = re.match(r'^\s*('+RE_DOUBLE+r')\s+('+RE_DOUBLE+r')\s*$', FirstLine)
 		#if the first line does not contain data try to interpret it as a file name
 		if (not matched):
 			SpecFileName = str(FirstLine).strip()
@@ -223,7 +223,7 @@ class ExStatesReader(MyFileService):
 			ExSectionStart = 0
 
 		for line in MyLines[(ExSectionStart+1):]:
-			matched = re.match('^\s*('+RE_DOUBLE+')\s+('+RE_DOUBLE+')\s*$', line)
+			matched = re.match(r'^\s*('+RE_DOUBLE+r')\s+('+RE_DOUBLE+r')\s*$', line)
 			if (matched):
 				#Wavelengths  (nm) Absorbance (M-1 cm-1)
 				Lambda_nm = float(matched.group(1))
@@ -342,7 +342,7 @@ class ExStatesReader(MyFileService):
 		# 3. Electron-vibrational coupling (between this vib. mode and the excited state specified in the first column), cm-1
 		# 4. Vibratioal decay rate, ps-1
 		for line in lines[(ExSectionStart+1):]:
-			matched = re.match('^\s*(\d+)\s+(\d+)\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s+('+RE_FLOAT+')\s*$', line)
+			matched = re.match(r'^\s*(\d+)\s+(\d+)\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s+('+RE_FLOAT+r')\s*$', line)
 			if (matched):
 				#Coordinates of the center:
 				ExStID = int(matched.group(1)) #Excited state ID
@@ -402,7 +402,7 @@ class ExStatesReader(MyFileService):
 						if ( int(QDVib.ExStID) == int(ExcitedState.ExStID)):
 							StateNotFound = False
 					if ( StateNotFound ):
-						print("Error: Quantum Dyanamics El./vib. modes requested in the configuration electronic excited state"+CFG_EXS_SEC_QDV+": "+str(QDVib.ExStID), end=' ')
+						print(r"Error: Quantum Dyanamics El./vib. modes requested in the configuration electronic excited state"+CFG_EXS_SEC_QDV+": "+str(QDVib.ExStID), end=' ')
 						print(" for "+CFG_SEC_FRG+str(FragID+1)+" was not found in "+FileName)
 						exit(-1)
 		return
