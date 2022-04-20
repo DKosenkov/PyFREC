@@ -10,12 +10,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Installation Instructions
 
 For Windows10:
+
 1.	Download and install 7-Zip https://www.7-zip.org/download.html
+
 2.	Download PyFREC: https://github.com/DKosenkov/PyFREC/archive/refs/heads/main.zip
+
 3.	Open and extract (unpack) PyFREC-main.zip with 7-Zip
+
 4.	Download and install Anaconda3 https://www.anaconda.com/
+
 5.	Start Anaconda Prompt (Anaconda3) form the start menu
+
 6.	Update conda:
+
 	conda update conda
 7.	Create conda environment and install required packages for PyFREC :
 	conda create --name pyfrec python=3.8 numpy=1.21.5 scipy=1.7.3 py=1.11.0 pytest=6.1.1
@@ -84,6 +91,7 @@ For Linux (Mac OS):
 	cd /home/dmytro/PyFREC-main/samples/01_bodipy_dte/Forster
 	chmod +x run.sh
 	./run.sh
+
 	cd /home/dmytro/PyFREC-main/samples/02_bodipy_trz/Forster
 	chmod +x run.sh
 	./run.sh
