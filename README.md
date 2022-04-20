@@ -11,30 +11,30 @@ Installation Instructions
 
 For Windows10:
 
-1.	Download and install 7-Zip https://www.7-zip.org/download.html
+	1.	Download and install 7-Zip https://www.7-zip.org/download.html
 
-2.	Download PyFREC: https://github.com/DKosenkov/PyFREC/archive/refs/heads/main.zip
+	2.	Download PyFREC: https://github.com/DKosenkov/PyFREC/archive/refs/heads/main.zip
 
-3.	Open and extract (unpack) PyFREC-main.zip with 7-Zip
+	3.	Open and extract (unpack) PyFREC-main.zip with 7-Zip
 
-4.	Download and install Anaconda3 https://www.anaconda.com/
+	4.	Download and install Anaconda3 https://www.anaconda.com/
 
-5.	Start Anaconda Prompt (Anaconda3) form the start menu
+	5.	Start Anaconda Prompt (Anaconda3) form the start menu
 
-6.	Update conda:
+	6.	Update conda:
 
 	conda update conda
-7.	Create conda environment and install required packages for PyFREC :
+	7.	Create conda environment and install required packages for PyFREC :
 	conda create --name pyfrec python=3.8 numpy=1.21.5 scipy=1.7.3 py=1.11.0 pytest=6.1.1
 
-8.	Activate environment for PyFREC:
+	8.	Activate environment for PyFREC:
 	conda activate pyfrec
 
-9.	Change directory and run tests (default download directory: C:\Users\<User Name>\Downloads\). Then, inspect tests.log for potential warning and errors.
+	9.	Change directory and run tests (default download directory: C:\Users\<User Name>\Downloads\). Then, inspect tests.log for potential warning and errors.
 	cd C:\Users\dkosenko\Downloads\PyFREC-main\src\tests
 	tests.bat
 
-10.	Change directory and run sample calculations. This will create “.log” files as output.
+	10.	Change directory and run sample calculations. This will create “.log” files as output.
 	Sample fluorescence lifetime calculations:
 	cd C:\Users\dkosenko\Downloads\PyFREC-main\samples\00_fl_lifetimes
 	run.bat
@@ -45,7 +45,7 @@ For Windows10:
 	cd C:\Users\dkosenko\Downloads\PyFREC-main\samples\02_bodipy_trz\Forster
 	run.bat
 
-11.	PyFREC usage in Anaconda3 prompt:
+	11.	PyFREC usage in Anaconda3 prompt:
 
 	cd <directory with your input files>
 	conda activate pyfrec
@@ -53,7 +53,7 @@ For Windows10:
 	or
 	C:\Users\dkosenko\Downloads\PyFREC-main\pyfrec.py -f  .\input_file.ini 1> .\output_file.log 2>&1
 
-For Linux (Mac OS): 
+For Linux (Mac OS):
 
 	1.	Download PyFREC:
 	wget https://github.com/DKosenkov/PyFREC/archive/refs/heads/main.zip
